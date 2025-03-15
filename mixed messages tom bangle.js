@@ -18,3 +18,15 @@ const generateRandomNumber = () => Math.floor(Math.random() * 10) + 1;
   
   // Store the 'motivation' as an array
   let personalMotivation = []
+
+  // Function to get a random item from an array
+const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+// Function to get a random mood and motivation
+const getRandomMotivation = () => ({
+    mood: getRandomItem(favoriteMotivation.mood),
+    motivation: getRandomItem(favoriteMotivation.motivation)
+});
+
+// Example usage:
+console.log(getRandomMotivation());
